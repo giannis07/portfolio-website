@@ -1,0 +1,649 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+a{
+    text-decoration: none;
+}
+:root{
+    --maingreen:#10ba35;
+    --maindark:#212529;
+    --secdark:#1d2e1f;
+}
+
+ 
+
+ 
+
+/* ========================  navbar ================================================ */
+.navbar{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    background: rgba(0, 0, 0, 0.3)!important;
+    backdrop-filter: blur(10px);
+    z-index:1000;
+}
+
+.navbar-brand{
+    font-weight: 700!important;
+}
+
+.navbar-nav li{
+    margin-left: 30px;
+}
+.navbar-nav li:hover a, .navbar-nav li.active a{
+   color: var( --maingreen);
+   transition: color 0.3s ease;
+}
+
+
+section{
+    min-height: 100vh;
+    padding-inline: 10%;
+    
+}
+
+.sec h2{
+    text-align:center;
+    padding-top:80px;
+}
+
+
+.sec p {
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+}
+
+/* ==========================   section home ==================================== */
+.home{
+    display: flex;
+    align-items: center;
+    
+    padding-top:60px;
+
+}
+
+
+.home-info h1 {
+    font-size: clamp(2rem, 5vw, 50px);  
+}
+
+.home-info h2 {
+    font-size: clamp(2rem, 3vw, 30px);  
+	margin-top:-10px;
+    color:var(--maingreen);
+}
+ 
+
+
+.link-scmedia{
+    display: flex;
+    align-items: center;
+
+}
+
+.link-scmedia .scmedia{
+    margin-left: 20px;
+    display: inline-flex;
+}
+.link-scmedia .scmedia a{
+    display: inline-flex;
+    padding:8px;
+    border:2px solid var( --maingreen);
+    color:var( --maingreen);
+    
+    border-radius: 50%;
+    font-size: 20px;
+    margin: 0 8px;
+    transition: .5s;
+    
+}
+.link-scmedia .scmedia a:hover{
+    background-color: var( --maingreen);
+    color:var( --maindark);
+    box-shadow: 0px 0px 6px var( --maingreen);
+    
+}
+
+.btngreen{
+    padding:10px 30px;
+    background-color: var( --maingreen);
+    border:2px solid var( --maingreen);
+    color: #fff;
+    border-radius: 40px;
+    box-shadow: 0px 0px 6px;
+    font-weight: 600;
+    transition: .5s;
+    text-wrap: nowrap;
+}
+
+.btngreen:hover{
+    background-color: transparent;
+    color: var( --maingreen);
+    box-shadow: none;
+}
+
+
+.home-img  {
+    padding:20px;
+
+}
+.home-img .img-box{
+    width:28vw;
+    height:32vw;
+    min-width:160px;
+    min-height:160px;
+    background-color: green;
+    border-radius: 50%;
+    overflow: hidden;
+    margin:20px;
+    box-shadow: 0px 0px 10px var( --maingreen);
+
+}
+.home-img .img-box .img-item{
+    position: relative;
+    width:100%;
+    height:100%;
+    
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+
+}
+.home-img .img-box .img-item img{
+    position: absolute;
+    object-fit: cover;
+    width:100%;
+    display: block;
+    margin-top:-14px;
+
+}
+
+
+
+.about h2 {
+  color: var( --maingreen);
+}
+
+
+/* =================== section projects ================================= */
+
+
+
+.projects {
+    text-align: center;
+    padding: 3rem 10%;
+}
+
+.projects h2 {
+    padding-top: 80px;
+    color: var(--maingreen);  
+}
+
+.projects p {
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 3rem;
+    color: #dcdcdc;
+}
+
+/* Grid container */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 0;
+}
+
+.project-content h3 {
+	min-height:60px;
+}
+
+.project-overlay {
+	color:rgb(110 168 254);
+}
+
+/* Card styling */
+.project-card {
+    background: linear-gradient(145deg, #113d2b, #1a593a);
+    border-radius: 10px;
+    padding: 2rem;
+    min-height:500px;
+    color: white;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card i {
+    font-size: 2.5rem;
+    color: var(--maingreen);
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    color: var(--maingreen);
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #dcdcdc;
+}
+
+/* Hover effects */
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 20px rgba(0, 153, 76, 0.6), 0px 0px 30px rgba(26, 89, 58, 0.5);
+     
+    border: 1px solid var(--maingreen);
+    background: linear-gradient(145deg, #0f1914, #131814);
+}
+
+
+.view-more-card {
+    background: none;  
+    border: 1px solid var(--maingreen);  
+    padding: 0;  
+    display: flex; 
+    align-items: center;  
+    justify-content: center;  
+	 
+	font-size:16pt;
+}
+
+
+
+.project-content {
+  flex: 1 1 auto;
+}
+
+/* Style your note at the bottom */
+.project-note {
+  margin-top: auto;
+  font-size: 0.875rem;     
+  color: #aaa;             
+  padding-top: 1rem;       
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+
+
+
+/* =================   Section skills styling ==========================================*/
+.skills {
+    text-align: center;
+    padding: 3rem 10%;
+}
+
+.skills h2 {
+    padding-top: 80px;
+    color: var( --maingreen);
+}
+.skills h3 {
+    
+    color: var( --maingreen);
+}
+
+.skills p {
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 3rem;
+    color: #dcdcdc;
+}
+
+/* Grid container */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0;
+}
+
+/* Card styling */
+.skill-card {
+    background: linear-gradient(145deg, #0f1914, #16231d);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0, 255, 153, 0.2), -5px -5px 15px rgba(0, 0, 0, 0.5);
+    border: 1px solid #1c2a22;
+    color: white;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card i {
+    font-size: 2.5rem;
+    color: var(--maingreen);
+    margin-bottom: 1rem;
+}
+
+.skill-card h3 {
+    font-size: 1.5rem;
+    color: var(--maingreen);
+    margin-bottom: 1rem;
+}
+
+.skill-card p {
+    font-size: 1rem;
+    color: #dcdcdc;
+}
+
+/* Hover effect */
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 20px rgba(0, 255, 153, 0.3), 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+/* =============== Contact Section Styling =============================*/
+.contact {
+  padding: 80px 20px; 
+  background-color: var(--maindark);  
+  text-align: center;
+  color: #fff;
+}
+
+.contact-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact h2 {
+    text-align: center;
+  font-size: 2.8em;  
+  color: var(--maingreen);  
+  margin-bottom: 20px;
+  padding-top: 0;  
+}
+
+.contact p {
+  font-size: 1.2em;
+  color: #dcdcdc;  
+  margin-bottom: 40px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;  
+}
+
+.contact-button {
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(145deg, #0f1914, #16231d);  
+  border: 1px solid var(--maingreen);  
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;  
+  font-size: 1.1em;
+  transition: all 0.3s ease; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), inset 0 0 5px rgba(16, 186, 53, 0.1);    
+}
+
+.contact-button i {
+  color: var(--maingreen);  
+  font-size: 1.6em;  
+  margin-right: 12px;
+}
+
+.contact-button span {
+  font-weight: 500;
+}
+
+.contact-button:hover {
+  background-color: var(--maingreen);  
+  color: #dcdcdc; 
+  border-color: var(--maingreen);
+  transform: translateY(-5px);  
+  box-shadow: 0 8px 15px rgba(0, 255, 153, 0.3), 0px 0px 20px rgba(0, 255, 153, 0.2);  
+}
+
+.contact-button:hover i {
+  color: #dcdcdc;
+}
+
+/* Responsive Adjustments for Contact Section */
+@media (max-width: 768px) {
+  .contact h2 {
+    font-size: 2.2em;
+  }
+
+  .contact p {
+    font-size: 1em;
+    margin-bottom: 30px;
+  }
+
+  .contact-button {
+    font-size: 1em;
+    padding: 12px 25px;
+  }
+
+  .contact-button i {
+    font-size: 1.4em;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-links {
+    flex-direction: column;  
+    gap: 15px;
+  }
+
+  .contact-button {
+    width: 90%;  
+    justify-content: center;  
+  }
+}
+
+
+/* ============= Section  experience ====================== */
+.experience {
+  text-align: center;
+  padding: 3rem 10%;
+}
+
+.experience h2 {
+  padding-top: 80px;
+  color: var(--maingreen);
+}
+
+.experience p {
+  max-width: 500px;
+  margin: auto;
+  margin-bottom: 2rem;
+  color: #dcdcdc;
+}
+
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.experience-card {
+  background: linear-gradient(145deg, #0f1914, #16231d);
+  border: 1px solid var(--maingreen);
+  border-radius: 10px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0px 0px 15px rgba(0, 255, 153, 0.2);
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 0px 20px rgba(0, 255, 153, 0.3);
+}
+
+.experience-header {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.experience-date {
+  color: var(--maingreen);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.experience-card h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0.3rem 0;
+}
+
+.experience-card h4 {
+  color: #aaa;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.experience-body ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  text-align: left;
+}
+
+.experience-body li {
+  margin-bottom: 0.6rem;
+  color: #dcdcdc;
+}
+
+/* ============= end Section  experience ====================== */
+
+
+
+/* ============= Section  education ====================== */
+
+.education {
+  text-align: center;
+  padding: 3rem 10%;
+}
+
+.education h2 {
+  padding-top: 80px;
+  color: var(--maingreen);
+}
+
+.education p {
+  max-width: 500px;
+  margin: auto;
+  margin-bottom: 2rem;
+  color: #dcdcdc;
+}
+
+.timeline {
+  position: relative;
+  margin: 2rem auto;
+  padding-left: 2rem;
+  max-width: 700px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 1.25rem;
+  height: 100%;
+  width: 2px;
+  background: var(--maingreen);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 0.8rem;
+  background: var(--maingreen);
+  border: 3px solid #131814;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.2rem;
+}
+
+.timeline-content {
+  background: linear-gradient(145deg, #0f1914, #16231d);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--maingreen);
+  box-shadow: 0px 0px 10px rgba(0, 255, 153, 0.2);
+  text-align: left;
+  width: 100%;
+}
+
+.timeline-date {
+  display: block;
+  color: var(--maingreen);
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-content h3 {
+  margin: 0.2rem 0;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.timeline-content p {
+  margin: 0;
+  color: #ccc;
+  font-size: 1rem;
+}
+
+/* ============= end  Section  education ====================== */
+
+ 
+
+@media screen and (max-width: 800px) {
+    .home{
+        display: flex;
+        flex-wrap: wrap-reverse;
+
+        flex-direction: column-reverse;
+
+        align-items:flex-start;
+        justify-content: center;
+        text-align: center;
+        margin: auto;    
+    }
+
+    .home-info,.home-img{
+        width:100%;
+    }
+
+    .img-box{
+        margin: auto!important;
+    }
+
+    .link-scmedia{
+        justify-content: center;
+    } 
+
+}
